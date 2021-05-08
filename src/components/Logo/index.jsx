@@ -1,6 +1,8 @@
+import React from 'react';
+
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { defaultTheme, typeScale } from '../../utils';
+import { theme, typeScale, primaryFont } from '../../utils';
 
 const VARIANTS = {
   PRIMARY: 'primary',
@@ -8,12 +10,12 @@ const VARIANTS = {
 };
 
 const StyledLogo = styled.div`
-  font-family: ${defaultTheme.logoFont};
+  font-family: ${primaryFont};
   font-size: ${typeScale.logo};
   text-decoration: none;
-  padding: 32px 40px;
+  padding: 12px 20px;
   border-width: 2px;
-  border-style: solid;
+  border-style: dashed;
   display: inline-block;
   transition: box-shadow 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
   &:hover {
@@ -24,15 +26,15 @@ const StyledLogo = styled.div`
   ${(props) =>
     props.variant === VARIANTS.PRIMARY &&
     css`
-      color: ${defaultTheme.primaryLogoTextColor};
-      border-color: ${defaultTheme.primaryLogoBorder};
+      color: ${theme.logo.primary.text};
+      border-color: ${theme.logo.primary.border};
     `}
 
   ${(props) =>
     props.variant === VARIANTS.SECONDARY &&
     css`
-      color: ${defaultTheme.secondaryLogoTextColor};
-      border-color: ${defaultTheme.secondaryLogoBorder};
+      color: ${theme.logo.secondary.text};
+      border-color: ${theme.logo.secondary.border};
     `}
 `;
 

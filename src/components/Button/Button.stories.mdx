@@ -46,18 +46,6 @@ The secondary button will be used is forms.
   </Story>
 </Preview>
 
-## Render a tertiary button
-
-The tertiary button is used in the navbar component.
-
-<Preview withToolbar>
-  <Story name='Tertiary'>
-    <Button size='default' variant='tertiary'>
-      This is a tertiary button
-    </Button>
-  </Story>
-</Preview>
-
 ## Sizes
 
 The large button can be used for accessibility.
@@ -94,7 +82,7 @@ export const Template = (args) => <Button {...args} />;
       variant: {
         control: {
           type: 'select',
-          options: ['primary', 'secondary', 'tertiary'],
+          options: ['primary', 'secondary'],
         },
       },
       size: {

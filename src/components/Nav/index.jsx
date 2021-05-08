@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { defaultTheme, typeScale } from '../../utils';
+import { theme, typeScale, primaryFont } from '../../utils';
 
 const VARIANTS = {
   LEFT: 'left',
@@ -34,6 +35,7 @@ Header.defaultProps = {
 };
 
 export const Nav = styled.nav`
+  font-family: ${primaryFont};
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -58,13 +60,13 @@ export const NavItem = styled.a`
   cursor: pointer;
   padding: 0;
   font-size: ${typeScale.header4};
-  color: ${defaultTheme.navLink};
+  color: ${theme.nav.link};
   background: none;
   border: none;
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: ${defaultTheme.navLinkHover};
+    color: ${theme.nav.hover};
   }
 `;
 
