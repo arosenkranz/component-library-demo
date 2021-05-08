@@ -15,7 +15,7 @@ import { Button } from './index';
 The button component can be used by importing it into your app with the following code:
 
 ```js
-import { Button } from 'up-components';
+import { Button } from '@org/component-library';
 ```
 
 ## Render a primary button
@@ -46,24 +46,6 @@ The secondary button will be used is forms.
   </Story>
 </Preview>
 
-## Sizes
-
-The large button can be used for accessibility.
-
-<Preview withToolbar>
-  <Story name='Sizes'>
-    <div style={{ margin: '24px 0' }}>
-      <Button size='small'>This is a Small Button</Button>
-    </div>
-    <div style={{ margin: '24px 0' }}>
-      <Button size='default'>This is a Default Button</Button>
-    </div>
-    <div style={{ margin: '24px 0' }}>
-      <Button size='large'>This is a Large Button</Button>
-    </div>
-  </Story>
-</Preview>
-
 ### Playground
 
 Experiment with this story in the Canvas tab.
@@ -75,7 +57,6 @@ export const Template = (args) => <Button {...args} />;
     name='Playground'
     args={{
       variant: 'primary',
-      size: 'default',
       children: 'Button Text',
     }}
     argTypes={{
@@ -83,12 +64,6 @@ export const Template = (args) => <Button {...args} />;
         control: {
           type: 'select',
           options: ['primary', 'secondary'],
-        },
-      },
-      size: {
-        control: {
-          type: 'select',
-          options: ['default', 'small', 'large'],
         },
       },
     }}
