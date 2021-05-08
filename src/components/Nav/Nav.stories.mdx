@@ -1,0 +1,46 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { Header, Nav, NavItem } from './index';
+import { Logo } from '../Logo';
+
+<Meta title='Design System/Nav' component={Nav} />
+
+# Header and Navigation Components
+
+The Nav component can be used by importing it into your app with the following code:
+
+```js
+import { Header, Nav, NavItem } from 'up-components';
+```
+
+## Render a primary logo
+
+<Preview withToolbar>
+  <Story name='Primary'>
+    <Header>
+      <Logo />
+      <Nav>
+        <NavItem href='#'>Shop</NavItem>
+        <NavItem href='#'>Blog</NavItem>
+        <NavItem href='#'>Location</NavItem>
+        <NavItem href='#'>Contact</NavItem>
+      </Nav>
+    </Header>
+  </Story>
+</Preview>
+
+## Render a flipped navigation
+
+<Preview withToolbar>
+  <Story name='Secondary'>
+    <Header variant='right'>
+      <Logo variant='secondary' href='#' />
+      <Nav>
+        <NavItem href='#'>Shop</NavItem>
+        <NavItem href='#'>Blog</NavItem>
+        <NavItem href='#'>Location</NavItem>
+        <NavItem href='#'>Contact</NavItem>
+      </Nav>
+    </Header>
+  </Story>
+</Preview>

@@ -1,0 +1,47 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Preview,
+} from '@storybook/addon-docs/blocks';
+
+import { Logo } from './index';
+
+<Meta title='Design System/Logo' component={Logo} />
+
+# Logo
+
+The logo component can be used by importing it into your app with the following code:
+
+```js
+import { Logo } from 'up-components';
+```
+
+## Render a primary logo
+
+<Preview withToolbar>
+  <Story name='Primary'>
+    <Logo />
+  </Story>
+</Preview>
+
+## Render a secondary logo
+
+<Preview withToolbar>
+  <Story name='Secondary'>
+    <Logo variant='secondary' />
+  </Story>
+</Preview>
+
+## Render a logo as a hyperlink
+
+<Preview withToolbar>
+  <Story name='Link'>
+    <Logo href='#' />
+  </Story>
+</Preview>
+
+## Logo Component Props
+
+<ArgsTable of={Logo} />
