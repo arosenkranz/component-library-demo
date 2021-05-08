@@ -1,10 +1,4 @@
-import {
-  Meta,
-  Story,
-  Canvas,
-  ArgsTable,
-  Preview,
-} from '@storybook/addon-docs/blocks';
+import { Meta, Story, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
 
 import { Button } from './index';
 
@@ -20,8 +14,6 @@ import { Button } from '@org/component-library';
 
 ## Render a primary button
 
-You can use a button for both DOM event binding or as a hyperlink &lt;a&gt;
-
 <Preview withToolbar>
   <Story name='Primary'>
     <Button
@@ -36,8 +28,6 @@ You can use a button for both DOM event binding or as a hyperlink &lt;a&gt;
 
 ## Render a secondary button
 
-The secondary button will be used is forms.
-
 <Preview withToolbar>
   <Story name='Secondary'>
     <Button size='default' variant='secondary'>
@@ -49,29 +39,3 @@ The secondary button will be used is forms.
 ## Button Component Props
 
 <ArgsTable of={Button} />
-
-### Playground
-
-Experiment with this story in the Canvas tab.
-
-export const Template = (args) => <Button {...args} />;
-
-<Canvas>
-  <Story
-    name='Playground'
-    args={{
-      variant: 'primary',
-      children: 'Button Text',
-    }}
-    argTypes={{
-      variant: {
-        control: {
-          type: 'select',
-          options: ['primary', 'secondary'],
-        },
-      },
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
