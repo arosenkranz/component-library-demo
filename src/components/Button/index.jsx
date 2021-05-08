@@ -75,17 +75,6 @@ export const Button = (props) => {
   );
 };
 
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(Object.values(VARIANTS)),
-  disabled: PropTypes.bool,
-  href: PropTypes.string,
-};
-
-Button.defaultProps = {
-  variant: VARIANTS.PRIMARY,
-  disabled: false,
-  href: undefined,
-};
+#step-3_1
 
 export default Button;
