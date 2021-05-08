@@ -18,13 +18,26 @@ function App() {
         </Nav>
       </Header>
       <div style={{ margin: '16px 0' }}>
-        <Button href='#'>This is a primary button link</Button>
+        <Button variant='primary'>This is a primary button</Button>
       </div>
       <div style={{ margin: '16px 0' }}>
-        <Button variant='tertiary'>This is a secondary button</Button>
+        <Button variant='secondary'>This is a secondary button</Button>
       </div>
       <div style={{ margin: '16px 0' }}>
         <Button disabled>This is a disabled button</Button>
+      </div>
+      <div style={{ margin: '16px 0' }}>
+        <Button variant='primary' href='#'>
+          This is a primary button link
+        </Button>
+      </div>
+      <div style={{ margin: '16px 0' }}>
+        <Button>This button has no props</Button>
+      </div>
+      <div style={{ margin: '16px 0' }}>
+        <Button variant='tertiary'>
+          This button has an incorrect variant property
+        </Button>
       </div>
     </main>
   );
