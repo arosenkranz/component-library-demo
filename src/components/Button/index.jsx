@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { theme, typeScale, primaryFont } from '../../utils';
 
+#step-2_1
+
 const StyledButton = styled.button`
   border-radius: none;
   display: inline-block;
@@ -22,9 +24,9 @@ const StyledButton = styled.button`
     outline-offset: 2px;
   }
 
-  #step-2_1
-
   #step-2_2
+
+  #step-2_3
 `;
 
 const ButtonLink = StyledButton.withComponent('a');
