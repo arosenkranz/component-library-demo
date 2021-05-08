@@ -18,7 +18,7 @@ function App() {
         </Nav>
       </Header>
       <div style={{ margin: '16px 0' }}>
-        <Button href={3}>This is a button</Button>
+        <Button href='#'>This is a primary button link</Button>
       </div>
       <div style={{ margin: '16px 0' }}>
         <Button variant='tertiary'>This is a secondary button</Button>
