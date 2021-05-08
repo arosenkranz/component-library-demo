@@ -4,16 +4,16 @@ export const theme = {
   button: {
     primary: {
       bg: blue[400],
-      text: blue[100],
+      text: neutral[100],
       bgHover: blue[500],
-      textHover: blue[200],
+      textHover: neutral[100],
     },
     secondary: {
-      bg: blue[100],
-      text: blue[400],
+      bg: neutral[100],
+      text: blue[500],
       border: blue[400],
-      bgHover: blue[200],
-      textHover: blue[500],
+      bgHover: blue[400],
+      textHover: neutral[100],
     },
     disabled: {
       text: neutral[600],
@@ -31,7 +31,7 @@ export const theme = {
     },
   },
   nav: {
-    link: blue[300],
+    link: blue[400],
     hover: blue[500],
   },
 };
