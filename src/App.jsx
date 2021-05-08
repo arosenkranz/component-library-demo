@@ -17,15 +17,7 @@ function App() {
           <NavItem href='#'>Contact</NavItem>
         </Nav>
       </Header>
-      <div style={{ margin: '16px 0' }}>
-        <Button href={3}>This is a button</Button>
-      </div>
-      <div style={{ margin: '16px 0' }}>
-        <Button variant='tertiary'>This is a secondary button</Button>
-      </div>
-      <div style={{ margin: '16px 0' }}>
-        <Button disabled>This is a disabled button</Button>
-      </div>
+      #step-2_3
     </main>
   );
 }

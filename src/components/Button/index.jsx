@@ -1,12 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
 import { theme, typeScale, primaryFont } from '../../utils';
-
-const VARIANTS = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-};
 
 const StyledButton = styled.button`
   border-radius: none;
@@ -28,41 +22,9 @@ const StyledButton = styled.button`
     outline-offset: 2px;
   }
 
-  ${({ variant }) => {
-    if (variant === VARIANTS.PRIMARY) {
-      return css`
-        background-color: ${theme.button.primary.bg};
-        border: 1px solid ${theme.button.primary.bg};
-        color: ${theme.button.primary.text};
-        &:hover {
-          background-color: ${theme.button.primary.bgHover};
-          color: ${theme.button.primary.textHover};
-        }
-      `;
-    } else if (variant === VARIANTS.SECONDARY) {
-      return css`
-        background-color: ${theme.button.secondary.bg};
-        color: ${theme.button.secondary.text};
-        border: 2px solid ${theme.button.secondary.border};
-        &:hover {
-          background-color: ${theme.button.secondary.bgHover};
-          color: ${theme.button.secondary.textHover};
-        }
-      `;
-    }
-  }}
+  #step-2_1
 
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      background: none !important;
-      color: ${theme.button.disabled.text} !important;
-      border: 1px solid ${theme.button.disabled.text} !important;
-      cursor: not-allowed;
-      &:hover {
-        box-shadow: none !important;
-      }
-    `}
+  #step-2_2
 `;
 
 const ButtonLink = StyledButton.withComponent('a');
@@ -73,19 +35,6 @@ export const Button = (props) => {
   ) : (
     <StyledButton {...props} />
   );
-};
-
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(Object.values(VARIANTS)),
-  disabled: PropTypes.bool,
-  href: PropTypes.string,
-};
-
-Button.defaultProps = {
-  variant: VARIANTS.PRIMARY,
-  disabled: false,
-  href: undefined,
 };
 
 export default Button;
