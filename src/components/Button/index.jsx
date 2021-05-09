@@ -8,7 +8,7 @@ const BTN_VARIANTS = {
   SECONDARY: 'secondary',
 };
 
-const Button = styled.button`
+export const Button = styled.button`
   border-radius: none;
   display: inline-block;
   min-width: 75px;
@@ -55,4 +55,3 @@ const Button = styled.button`
 
 #step-3_1
 
-export default Button;
