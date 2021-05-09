@@ -2,7 +2,6 @@ import React from 'react';
 import { GlobalStyle } from './utils';
 import { Logo } from './components/Logo';
 import { Header, Nav, NavItem } from './components/Nav';
-#step-1_1
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <NavItem href='#'>Contact</NavItem>
         </Nav>
       </Header>
-      #step-1_2
     </main>
   );
 }
