@@ -128,7 +128,7 @@ Let's take a quick knowledge check:
 <summary>Click to see the answer!</summary>
 <details>
   <strong>styled.h1``</strong>
-  <p>Yes! The <code>styled</code> object allows us to create a styled-component for any semantic HTML element.</p>
+  <p>Yes! The <code>styled</code> object allows us to create a styled-component for any HTML element.</p>
 </details>
 
 ---
