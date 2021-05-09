@@ -4,7 +4,7 @@ import { theme, typeScale, primaryFont } from '../../utils';
 
 #step-2_1
 
-const StyledButton = styled.button`
+const Button = styled.button`
   border-radius: none;
   display: inline-block;
   min-width: 75px;
@@ -27,15 +27,5 @@ const StyledButton = styled.button`
   #step-2_2
 
 `;
-
-const ButtonLink = StyledButton.withComponent('a');
-
-export const Button = (props) => {
-  return props.href ? (
-    <ButtonLink href={props.href} {...props} />
-  ) : (
-    <StyledButton {...props} />
-  );
-};
 
 export default Button;
