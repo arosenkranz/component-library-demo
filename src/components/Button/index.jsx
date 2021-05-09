@@ -65,12 +65,12 @@ export const Button = (props) => {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(Object.values(VARIANTS)),
+  variant: PropTypes.oneOf(Object.values(BTN_VARIANTS)),
   href: PropTypes.string,
 };
 
 Button.defaultProps = {
-  variant: VARIANTS.PRIMARY,
+  variant: BTN_VARIANTS.PRIMARY,
   href: undefined,
 };
 
