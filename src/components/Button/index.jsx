@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { theme, typeScale, primaryFont } from '../../utils';
 
-const VARIANTS = {
+const BTN_VARIANTS = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
 };
@@ -28,8 +28,8 @@ const StyledButton = styled.button`
     outline-offset: 2px;
   }
 
-  ${({ variant }) => {
-    if (variant === VARIANTS.PRIMARY) {
+  ${(props) => {
+    if (props.variant === BTN_VARIANTS.PRIMARY) {
       return css`
         background-color: ${theme.button.primary.bg};
         border: 1px solid ${theme.button.primary.bg};
@@ -39,7 +39,7 @@ const StyledButton = styled.button`
           color: ${theme.button.primary.textHover};
         }
       `;
-    } else if (variant === VARIANTS.SECONDARY) {
+    } else if (props.variant === BTN_VARIANTS.SECONDARY) {
       return css`
         background-color: ${theme.button.secondary.bg};
         color: ${theme.button.secondary.text};
@@ -51,18 +51,6 @@ const StyledButton = styled.button`
       `;
     }
   }}
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      background: none !important;
-      color: ${theme.button.disabled.text} !important;
-      border: 1px solid ${theme.button.disabled.text} !important;
-      cursor: not-allowed;
-      &:hover {
-        box-shadow: none !important;
-      }
-    `}
 `;
 
 const ButtonLink = StyledButton.withComponent('a');
@@ -78,13 +66,11 @@ export const Button = (props) => {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(Object.values(VARIANTS)),
-  disabled: PropTypes.bool,
   href: PropTypes.string,
 };
 
 Button.defaultProps = {
   variant: VARIANTS.PRIMARY,
-  disabled: false,
   href: undefined,
 };
 

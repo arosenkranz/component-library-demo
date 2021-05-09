@@ -24,9 +24,6 @@ function App() {
         <Button variant='secondary'>This is a secondary button</Button>
       </div>
       <div style={{ margin: '16px 0' }}>
-        <Button disabled>This is a disabled button</Button>
-      </div>
-      <div style={{ margin: '16px 0' }}>
         <Button variant='primary' href='#'>
           This is a primary button link
         </Button>
