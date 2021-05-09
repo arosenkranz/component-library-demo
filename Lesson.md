@@ -4,6 +4,8 @@ Take [this lesson in Katacoda](https://www.katacoda.com/alexrosenkranz/scenarios
 
 ## Introduction
 
+Watch the [introduction video.](https://youtu.be/Avk4EU-aV8w)
+
 In this lesson, we're going to inherit a UI component library built with React, styled-components, PropTypes, and Storybook, and step through how to build and document a React UI component so other developers know how to use it.
 
 Ensuring that a UI component is used properly is important if the component library is to be utilized by a cross-functional development team or throughout the open source community.
