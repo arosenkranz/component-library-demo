@@ -8,7 +8,7 @@ const BTN_VARIANTS = {
   SECONDARY: 'secondary',
 };
 
-const StyledButton = styled.button`
+const Button = styled.button`
   border-radius: none;
   display: inline-block;
   min-width: 75px;
@@ -52,16 +52,6 @@ const StyledButton = styled.button`
     }
   }}
 `;
-
-const ButtonLink = StyledButton.withComponent('a');
-
-export const Button = (props) => {
-  return props.href ? (
-    <ButtonLink href={props.href} {...props} />
-  ) : (
-    <StyledButton {...props} />
-  );
-};
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
