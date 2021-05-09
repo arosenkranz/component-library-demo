@@ -26,7 +26,6 @@ const StyledButton = styled.button`
 
   #step-2_2
 
-  #step-2_3
 `;
 
 const ButtonLink = StyledButton.withComponent('a');
