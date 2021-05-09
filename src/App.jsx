@@ -24,11 +24,6 @@ function App() {
         <Button variant='secondary'>This is a secondary button</Button>
       </div>
       <div style={{ margin: '16px 0' }}>
-        <Button variant='primary' href='#'>
-          This is a primary button link
-        </Button>
-      </div>
-      <div style={{ margin: '16px 0' }}>
         <Button>This button has no props</Button>
       </div>
       #step-3_2
