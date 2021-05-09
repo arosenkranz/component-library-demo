@@ -1,8 +1,10 @@
-import { Meta, Story, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 import { Button } from './index';
 
 <Meta title='Design System/Button' component={Button} />
+
+export const Template = (args) => <Button {...args} />;
 
 # Button
 
@@ -14,22 +16,54 @@ import { Button } from '@org/component-library';
 
 ## Render a primary button
 
+Use `<Button variant="primary">Text</Button>` to render a primary, solid button:
+
 <Preview withToolbar>
-  <Story name='Primary'>
-    <Button variant='primary' onClick={() => alert('this button was clicked')}>
-      Primary Button
-    </Button>
+  <Story
+    name='Primary'
+    args={{
+      variant: 'primary',
+      children: 'Primary Button',
+      onClick: () => alert('this button was clicked'),
+    }}
+    argTypes={{
+      variant: {
+        name: 'Variant',
+        description: 'Render different variants of the Button',
+        control: {
+          type: 'select',
+          options: ['primary', 'secondary'],
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Preview>
 
 ## Render a secondary button
 
+Use `<Button variant="secondary">Text</Button>` to render a secondary, outlined button. This can be used to create contrast and help distinguish actions a user can take when compared to a primary button.
+
 <Preview withToolbar>
-  <Story name='Secondary'>
-    <Button variant='secondary'>Secondary Button</Button>
+  <Story
+    name='Secondary'
+    args={{
+      variant: 'secondary',
+      children: 'Secondary Button',
+      onClick: () => alert('this button was clicked'),
+    }}
+    argTypes={{
+      variant: {
+        name: 'Variant',
+        description: 'Render different variants of the Button',
+        control: {
+          type: 'select',
+          options: ['primary', 'secondary'],
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Preview>
-
-## Button Component Props
-
-<ArgsTable of={Button} />
