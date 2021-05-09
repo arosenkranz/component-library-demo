@@ -8,7 +8,7 @@ const BTN_VARIANTS = {
   SECONDARY: 'secondary',
 };
 
-const Button = styled.button`
+export const Button = styled.button`
   border-radius: none;
   display: inline-block;
   min-width: 75px;
@@ -61,5 +61,3 @@ Button.propTypes = {
 Button.defaultProps = {
   variant: BTN_VARIANTS.PRIMARY,
 };
-
-export default Button;
